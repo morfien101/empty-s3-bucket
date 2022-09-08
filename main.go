@@ -88,7 +88,7 @@ func main() {
 	flagFormat := flag.String("format", "pretty-json", fmt.Sprintf("If -dry-run or -show-objects is used, the format of the output, %s are available.", strings.Join(VALID_FORMATS, ",")))
 	flagDryRun := flag.Bool("dry-run", false, "Show versions to be deleted.")
 	flagShowObjects := flag.Bool("show-objects", false, "Show the objects before attempting to delete them.")
-	flagVersion := flag.bool("v", false, "Print the version.")
+	flagVersion := flag.Bool("v", false, "Print the version.")
 
 	flag.Parse()
 
