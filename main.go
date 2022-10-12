@@ -242,7 +242,7 @@ func deleteObjects(awsSession *session.Session, bucketName string, objects objec
 			counter := 1
 			max := 1000
 			for _, o := range s3ObjectsRaw {
-				if counter <= max {
+				if counter <= max-1 {
 					counter++
 					deletePacks[index].Objects = append(deletePacks[index].Objects, o)
 				} else {
@@ -259,7 +259,7 @@ func deleteObjects(awsSession *session.Session, bucketName string, objects objec
 		if len(s3DirsRaw) <= 1000 {
 			deletePacks = append(deletePacks, &s3.Delete{Objects: s3DirsRaw})
 		} else {
-			counter := 1
+			counter := 0
 			max := 1000
 			for _, o := range s3DirsRaw {
 				if counter <= max {

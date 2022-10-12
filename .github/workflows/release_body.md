@@ -1,3 +1,3 @@
-# First release
+# Minor bug fix
 
-Seems to work just fine :) enjoy!
+Fixed an off by one bug
